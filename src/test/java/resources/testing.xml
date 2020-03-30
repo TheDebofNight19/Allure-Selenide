@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SelenideAllure">
+    <test name="Selenide">
+        <classes>
+            <class name ="com.github.TheDebofNight19.TestBSPB"/>
+            <class name ="com.github.TheDebofNight19.LoginPage"/>
+            <class name ="com.github.TheDebofNight19.OneTimePassword"/>
+            <class name ="com.github.TheDebofNight19.MainMenu"/>
+        </classes>
+    </test>
+
+</suite>
