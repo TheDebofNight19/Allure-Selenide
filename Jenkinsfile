@@ -3,25 +3,24 @@ pipeline{
     stages{
         stage('Clean'){
             steps{
-                sh 'mvn clean'
+                bat 'mvn clean'
             }
         }
         stage('Test'){
             steps{
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
     post{
         always{
             script{
-                allure([
-                    includeProperties:false,
+                allure includeProperties:false,
                     jdk:'',
                     properties:[],
                     reportBuildPolicy:'ALWAYS',
-                                        results:[[path:'target/allure-results']]
-                                        ])
+                    results:[[path:'target/allure-results']]
+
                                 }
                             }
                         }
